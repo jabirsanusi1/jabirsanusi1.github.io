@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rent a Car</title>
+  <link rel="stylesheet" href="gyatt.css">
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    background-image: url(G63s.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 50%;
+    background-position: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+   
+}
+     
+    nav li{
+            display: inline;
+            margin: 20px;
+        }
+        nav ul{
+            list-style: none;
+            padding: 0;
+        }
+        nav a{
+            text-decoration: none;
+            color: white;
+        }
+        nav a:hover{
+            background-color: chocolate;
+            text-decoration: underline;
+            padding: 10px;
+        }
+      
+        #Active {
+        background-color: chocolate;
+        padding: 14px;
+        }
+        .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust this for desired height */
+}
+
+.cta-button {
+  background-color: blue;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: darkred;
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rent a Car</h1>
+    <nav>
+      <li><a href="index.html">Home</a></li>
+      <li> <a href="ProjectAboutUS.html">About Us</a></li> 
+      <li><a href="ProjectRentalsInfo.html">Rental Info</a></li>
+      <li>  <a id="Active">Rent a Car</a></li>
+      <li>  <a href="Project Contact us.html">Contact Us</a></li>
+      <li>   <a href="ProjectTestimonials.html">Testimonials</a></li>
+  </nav>
+ <!---
+    <button id="viewCarsBtn">View Cars</button>
+     -->
+  </header>
+  <div class="hero">
+    <a href="ProjectCarFleets.html" class="cta-button">View Our Fleet</a>
+
+
+  </div>
+  
+
+
+  <div id="carOptions" class="hidden">
+    <h2>Available Cars</h2>
+    <div id="carList"></div>
+  </div>
+
+  <script src="gyattt.js"></script>
+</body>
+</html>

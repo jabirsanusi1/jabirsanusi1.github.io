@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration & Login Page</title>
+    <style>
+        /* Registration css */
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            color: #ffa365;
+            font-weight: 600;
+            padding: 0 35px 0 5px;
+        }
+
+        .input-box .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 8px;
+            color: #ffa365;
+        }
+        .login-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+            /* Login Css  */
+        .input-box input[type="text"],
+        .input-box input[type="password"] {
+            width: 25%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            color: #333;
+        }
+        body{
+            text-align: center;
+        }
+
+        .input-box label {
+            position: absolute;
+            top: 25%;
+            left: 10px;
+            color: #777;  
+        }
+
+        .input-box input:focus + label,
+        .input-box input:not(:placeholder-shown) + label {
+           font-size: medium;
+            top: 0;
+            color: #007bff;
+            padding-left: auto;
+            
+        }
+        
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            width: 25%;
+            border-radius: 4px;
+        }
+    
+        .registration-section {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-section">
+        <h2>Login</h2>
+        <form action="ProjectRentacar.html" method="post">
+            <!-- Login form inputs -->
+            <div class="input-box">
+                <input type="text" name="email"  required>
+                <label for="Email">Email</label>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder=" " required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#" class="normal">Forgot password</a>
+            </div>
+            <button type="submit" href="ProjectRentacar.html">Login</button>
+        </form>
+        <p>Don't have an account? <a href="ProjectRegistrationPage.html">Register here</a>.</p>
+    </div>
+
+    
+    <script>
+        // Function to toggle between login and registration sections
+        function toggleSections(sectionToShow, sectionToHide) {
+            document.querySelector(sectionToHide).style.display = 'none';
+            document.querySelector(sectionToShow).style.display = 'block';
+        }
+
+        // Add event listeners to the anchor links for toggling sections
+        document.querySelector('a[href="#ProjectRentacar.html"]').addEventListener('click', function() {
+            toggleSections('.registration-section', '.login-section');
+        });
+
+        document.querySelector('a[href="#ProjectLoginPage.html"]').addEventListener('click', function() {
+            toggleSections('.login-section', '.registration-section');  
+        });
+        loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+         const username = document.getElementById('loginUsername').value;
+          const password = document.getElementById('loginPassword').value;
+
+  // Retrieve user from local storage
+  const storedPassword = localStorage.getItem(Email);
+
+  if (password === storedPassword) {
+    console.log('Login successful');
+    // You can add logic here for successful login
+  } else {
+    console.log('Login failed. Incorrect username or password.');
+    // You can add logic here for failed login attempt
+  }
+});
+    </script>
+</body>
+</html>

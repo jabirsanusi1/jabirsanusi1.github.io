@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        header {
+            background-color: rgb(14, 13, 13);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        } 
+        h2 {
+            text-align: center;
+        }
+        .car-fleet {
+            display: flex;
+            
+            row-gap: 20px;
+            padding: 0 20px;
+            justify-items: center;
+            justify-content: center;
+
+
+        }
+        nav li{
+            display: inline;
+            margin: 20px;
+        }
+        nav ul{
+            list-style: none;
+            padding: 0;
+        }
+        nav a{
+            text-decoration: none;
+            color: white;
+        }
+        nav a:hover{
+            background-color: chocolate;
+            text-decoration: underline;
+            padding: 10px;
+        }
+        .car-list li {
+            border: 1px solid #ccc;
+            padding: 0px;
+            text-align: center;
+            list-style: none;
+            margin: 0;
+            max-width: 300px;
+            margin-right: 20px;
+        }
+        .car-list img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        footer {
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+        #Active{
+            background-color: chocolate;
+            padding: 14px;
+        }
+        button{
+            color: rgb(36, 36, 201);
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Car Fleets</h1> 
+        <nav>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ProjectAboutUS.html">About Us</a></li> 
+            <li><a href="ProjectRentalsInfo.html">Rental Info</a></li> 
+            <li>  <a href="Project Contact us.html">Contact Us</a></li>
+            <li>   <a href="ProjectTestimonials.html">Testimonials</a></li>
+            <li>   <a id="Active">Our Fleets</a></li>
+        </nav>
+        
+    </header>
+<main>
+    <section class="car-fleet">
+        <ul class="car-list">
+        </li>
+        <li>
+            <h3>Toyota Lancruiser</h3>
+            <img src="Toyota Lancruiser 2022.jfif" alt="Toyota Lancruiser">
+            <p>Class: SUV</p>  
+            <p>Engine: 3.0L V8</p>                  
+            <p>Features: All-wheel drive, sunroof, leather seats, and more.</p>
+            <p>Price: 90k/day</p>
+            <button onclick="confirmRent('Toyota Lancruiser ','90k/day')">Rent</button>
+        </li>
+
+        <li>
+            <h3>Ford F-150</h3>
+            <img src="Raptor2022.jfif" alt="Ford F-150">
+            <p>Class: Truck</p>
+            <p>Engine: 6.5L V8</p>
+            <p>Features: All-wheel drive, Traction control, offroad capabilities, and more.</p>
+            <p>Price: 110k/day</p>
+            <button onclick="confirmRent('Ford F-150', '90k/day')">Rent</button>
+        </li>
+        <li>
+            <h3>Mercedeces-benz s class</h3>
+            <img src="s class 2023.jfif" alt="Mercedeces-benz">
+            <p>Class: luxury sedan</p>
+            <p>Engine: 4.6L V12 </p>
+            <p>Features: All-wheel drive, bulletproof, leather seats, and more.</p>
+            <p>Price: 170k/day</p>
+            <button onclick="confirmRent('Mercedeces-benz', '170k/day')">Rent</button>
+        </li>
+        <li>
+            <h3>Bugatti Chiron Supersport 300+</h3>
+            <img src="Chiron2022.jfif" alt="Bugatti chiron">
+            <p>Class: Hyper Car</p>
+            <p>Engine: 8.0L quad turbo W16 </p>
+            <p>Features: All-wheel drive, launch control, sixteen cyclinders, and more.</p>
+            <p>Price: 1m/day</p>
+            <button onclick="confirmRent('Buggati Chiron', '1M/day')">Rent</button>
+        </li>
+        <li>
+            <h3>Audi S8</h3>
+            <img src="s82022.jfif" alt="Audi S8">
+            <p>Class: Mid-size sedan</p>
+            <p>Engine: 4.6L V8 </p>
+            <p>Features: All-wheel drive, panaramic roof, leather seats, and more.</p>
+            <p>Price: 130k/day</p>
+            <button onclick="confirmRent('Audi S8', '130k/day')">Rent</button>
+        </li>
+        <li>
+            <h3>Toyota Hilux 2023</h3>
+            <img src="toyota hilux 2023.jfif" alt="Toyota Hilux">
+            <p>Class: Truck</p>
+            <p>Engine: 4.0L V6 </p>
+            <p>Features: All-wheel drive, Ground clearance, heated leather seats, and more.</p>
+            <p>Price: 70k/day</p>
+            <button onclick="confirmRent('Toyota Hilux', '70k/day')">Rent</button>
+        </li>
+        <li>
+            <h3>Bmw M5 Csl</h3>
+            <img src="M5.jfif" alt="Bmw M5">
+            <p>Class: sedan</p>
+            <p>Engine: 4.4L V8 </p>
+            <p>Features: All-wheel drive, ambient light,  leather seats, and more.</p>
+            <p>Price: 100k/day</p>
+            <button onclick="confirmRent('BMW M5', 'Performance Sedan','100k/day')">Rent</button>
+        </li>
+        <li>
+            <h3>Honda Accord Touring</h3>
+            <img src="honda2022.jfif" alt="Honda Accord">
+            <p>Class: sadan</p>
+            <p>Engine: 2.0L I6 </p>
+            <p>Features: All-wheel drive, TouchScreen display,  leather seats, and more.</p>
+            <p>Price: 60k/day</p>
+            <button onclick="confirmRent('Honda Accord', '60k/day')">Rent</button>
+            
+        </li>
+        <li>
+            <h3>Mercedeces-benz C63 AMG</h3>
+            <img src="c63.jfif" alt="Mercedeces-benz">
+            <p>Class:coupe</p>
+            <p>Engine: 4.0L V8 </p>
+            <p>Features:Rear-Wheel drive, Manuel transmission,  leather seats, and more.</p>
+            <p>Price: 80k/day</p>
+            <button onclick="confirmRent('Mercedeces-benz', '80k/day')">Rent</button>
+            
+        </li>
+        </ul>
+    </section>
+</main>
+
+<script>
+    function confirmRent(carName, price) {
+    var confirmation = confirm(`Do you want to rent ${carName} for ${price}?`);
+    if (confirmation) {
+        alert(`You've rented ${carName}! Enjoy your ride!`);
+        // Here you can add further logic like sending a request to a server or handling the rental process
+    } else {
+        alert('Rental canceled.');
+        
+    }
+}
+</script>
+<footer>
+    <p>&copy; 2023 Sanusi & Sons Car Rentals. </p>
+    <p>All rights reserved.</p>
+</footer>
+</body>
+</html>
